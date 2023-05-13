@@ -41,8 +41,8 @@ This component contains scripts related to proxy configuration management.
 This component provides scripts for exporting and importing proxy configurations.
 
 - `Readme.md:` Instructions and details specific to the ProxyImport-Export scripts.
-- `config_proxy.txt`: A sample file used for exporting and importing proxy configurations.
 - `proxyimport_export.bat`: A batch script that allows for the export and import of proxy configurations.
+- `proxyimport_export.ps1`: A powershell script that allows for the export and import of proxy configurations.
 
 ### 4. [TraceRoute](/TraceRoute/Readme.md)
 
