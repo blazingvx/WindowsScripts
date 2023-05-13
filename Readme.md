@@ -1,21 +1,33 @@
-# Windows Scripts Repository
+# Windows Scripts Repository (Blaze Scripts)
 
 Welcome to the Windows Scripts Repository! This repository contains a collection of scripts for various Windows tasks, including network connectivity checks and proxy configuration management.
+
+<pre>
+     ____  _                  _____           _       _        
+    |  _ \| |                / ____|         (_)     | |       
+    | |_) | | __ _ _______  | (___   ___ _ __ _ _ __ | |_ ___  
+    |  _ <| |/ _` |_  / _ \  \___ \ / __| '__| | '_ \| __/ __| 
+    | |_) | | (_| |/ /  __/  ____) | (__| |  | | |_) | |_\__ \ 
+    |____/|_|\__,_/___\___| |_____/ \___|_|  |_| .__/ \__|___/ 
+                                            | |             
+                                            |_|                 
+</pre>
 
 ## Repository Contents
 
 The repository is organized into the following components:
 
-### 1. CheckNetwork
+### 1. [CheckNetwork](/CheckNetwork/Readme.md)
 
 This component provides scripts to check network connectivity and ping the default gateway.
 
+- `Readme.md`: Instructions and details specific to the CheckNetwork scripts.
 - `CheckInternet.bat`: A batch script that checks internet connectivity by pinging a reliable host.
 - `CheckInternet.ps1`: A powershell script that checks internet connectivity by pinging a reliable host.
 - `pingGateway.bat`: A batch script that retrieves the default gateway and continuously pings it.
 - `pingGateway.ps1`: A powershell script that retrieves the default gateway and continuously pings it.
 
-### 2. Proxy
+### 2. [Proxy](/Proxy/Readme.md)
 
 This component contains scripts related to proxy configuration management.
 
@@ -24,12 +36,21 @@ This component contains scripts related to proxy configuration management.
 - `set_proxy.ps1`: A PowerShell script that sets the proxy server and port in Windows using registry modifications.
 - `set_proxy.vba`: A VBA script for Microsoft Excel that sets the proxy server and port in Windows using registry modifications.
 
-### 3. ProxyImport-Export
+### 3. [ProxyImport-Export](/ProxyImport-Export/Readme.md)
 
 This component provides scripts for exporting and importing proxy configurations.
 
+- `Readme.md:` Instructions and details specific to the ProxyImport-Export scripts.
 - `config_proxy.txt`: A sample file used for exporting and importing proxy configurations.
 - `proxyimport_export.bat`: A batch script that allows for the export and import of proxy configurations.
+
+### 4. [TraceRoute](/TraceRoute/Readme.md)
+
+This component provides scripts for performing traceroute.
+
+- `Readme.md`: Instructions and details specific to the TraceRoute scripts.
+- `traceRoute.bat`: Batch script for performing traceroute.
+- `traceRoute.ps1`: PowerShell script for performing traceroute.
 
 ## Usage
 
