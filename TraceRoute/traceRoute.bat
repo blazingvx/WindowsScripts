@@ -1,4 +1,5 @@
 @echo off
+setlocal enabledelayedexpansion
 
 echo """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 echo "  ____  _                  _____           _       _        "
@@ -12,12 +13,29 @@ echo "                                            |_|             "
 echo """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 
-:CheckConnection
-ping -n 1 google.com >nul
-if %errorlevel%==0 (
-    echo Network connection is active.
-) else (
-    echo Network connection is down.
+set /p target=  "Insert Domain name to trace: "
+rem set target=example.com
+set maxHops=30
+
+echo Tracing route to %target%...
+
+for /l %%i in (1, 1, %maxHops%) do (
+    set "hop=%%i"
+    set "ip="
+    set "pingTime="
+
+    for /f "tokens=2 delims=[]" %%a in ('tracert -d -h !hop! !target! ^| findstr /i "!hop!  "') do (
+        set "ip=%%a"
+        for /f "tokens=5 delims==< " %%b in ('ping -n 1 -w 1000 !ip! ^| findstr /i "Reply"') do (
+            set "pingTime=%%b"
+            goto :display
+        )
+    )
+
+    :display
+    if defined ip (
+        echo Hop !hop!: !ip! - Response Time: !pingTime!ms
+    ) else (
+        echo Hop !hop!: Request Timed Out
+    )
 )
-timeout /t 5 >nul
-goto CheckConnection

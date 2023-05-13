@@ -50,6 +50,9 @@ This component provides scripts for exporting and importing proxy configurations
 
 Refer to the individual component folders for detailed instructions on how to use the scripts within each component.
 
+### Character Art
+- Visit [patorjk.com](https://patorjk.com/software/taag/#p=display&f=Graffiti&t=Type%20Something%20)
+
 ## Contribution
 
 Contributions to this repository are welcome! If you have improvements, bug fixes, or additional scripts related to Windows tasks, feel free to open a pull request. Please ensure that your contributions adhere to the repository's guidelines and standards.
@@ -64,4 +67,4 @@ The scripts are provided as-is, without any warranty or guarantee. The repositor
 
 For further details and information, please refer to the individual script files and their respective documentation.
 
-Happy scripting!
+Happy scripting! :smiley:
